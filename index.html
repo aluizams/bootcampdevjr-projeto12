@@ -17,41 +17,46 @@
                 <div class="row mt-5">
             <div class="col-md-6">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Nome">
+                <input type="text" class="form-control" id="nome" placeholder="Nome" required>
             </div>
         
             <div class="col-md-6">
                 <label for="sobrenome" class="form-label">Sobrenome</label>
-                <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome">
+                <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" required>
             </div>
         </div>
+        <div class="row">
             <div class="col-md-3">
                 <label for="cep" class="form-label">Pesquise pelo CEP</label>
-                <input type="text" class="form-control" id="cep" placeholder="CEP">
+                <input type="text" class="form-control" id="cep" placeholder="CEP" onblur="search()" required>
+                <div class="col-md" id="erro">
+
+                </div>  
+              </div>
             </div>
             <div class="row">
             <div class="col-md-10">
                 <label for="endereco" class="form-label mt-3">Endereço</label>
-                <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                <input type="text" class="form-control" id="endereco" placeholder="Endereço" disabled>
             </div>
             <div class="col-md-2">
                 <label for="numero" class="form-label mt-3">Número:</label>
-                <input type="text" class="form-control" id="numero" placeholder="Número">
+                <input type="text" class="form-control" id="numero" placeholder="Número" disabled>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <label for="bairro" class="form-label mt-3">Bairro</label>
-                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                <input type="text" class="form-control" id="bairro" placeholder="Bairro" disabled>
             </div>
             <div class="col-md-6">
                 <label for="cidade" class="form-label mt-3">Cidade</label>
-                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                <input type="text" class="form-control" id="cidade" placeholder="Cidade" disabled>
             </div>
         </div>
             <div class="col-md-2">
                 <label for="estado" class="form-label">Estado</label>
-                <input type="text" class="form-control" id="estado" placeholder="Estado">
+                <input type="text" class="form-control" id="estado" placeholder="Estado" disabled>
             </div>
             <div class="col-12 text-center">
                 <button type="submit" class="btn btn-primary">Salvar</button>
