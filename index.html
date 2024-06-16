@@ -13,7 +13,7 @@
         <h1 class="text-center mb-4">Cadastro de Clientes:</h1>
         <div class="card rounded shadow p-4">
             <div class="card-body">
-            <form class="row g-3">
+            <form class="row g-3" onsubmit="save(); return false;" id="formInfo">
                 <div class="row mt-5">
             <div class="col-md-6">
                 <label for="nome" class="form-label">Nome</label>
@@ -63,7 +63,7 @@
             </div>
         </form>
     
-        <table class="table table-striped mt-5">
+        <table class="table table-striped mt-5" id="tabela">
             <thead>
                 <tr>
                     <th>#</th>
