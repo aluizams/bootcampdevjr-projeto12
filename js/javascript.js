@@ -13,7 +13,9 @@ function search() {
             $("#cidade").val("");
             $("#estado").val("");
             $("#numero").prop("disabled", true);
-            showError("Não encontrado");
+            showError("Não encontrado. Por favor, insira um CEP válido.");
+            $("#formInfo button[type='submit']").prop("disabled", true);
+            return;
 
         } else {
             $("#endereco").val(response.logradouro);
@@ -21,10 +23,13 @@ function search() {
             $("#cidade").val(response.localidade);
             $("#estado").val(response.uf);
             $("#numero").prop("disabled", false);
+            $("#formInfo button[type='submit']").prop("disabled", false);
             clearError();
         }
     }).fail(() => {
-        showError("CEP Inválido");
+        showError("CEP Inválido. Por favor, insira um CEP válido.");
+        $("#numero").prop("disabled", true);
+        $("#formInfo button[type='submit']").prop("disabled", true);
     });
 }
 
